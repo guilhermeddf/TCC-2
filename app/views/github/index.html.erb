@@ -1,0 +1,23 @@
+<h1>Github#index</h1>
+<p>Find me in app/views/github/index.html.erb</p>
+
+<ul>
+  <% @repositories.each do |r| %>
+  <li><%= r.name %></li>
+  <% end %>
+</ul>
+
+
+
+<%= link_to "Deletar Repositório", delete_project_path, method: :delete  %><br />
+<%= link_to "Verificar Repositório", verify_project_path, method: :get %><br />
+<%= link_to "Criar Repositório", create_project_path, method: :post %><br />
+<%= link_to "Convidar alguém", invite_project_path, method: :post %><br />
+<%= link_to "Listar mandados", list_project_repository_path, method: :get %><br />
+<%= link_to "Listar recebidos", list_invitations_user_path, method: :get %><br />
+
+
+
+
+
+

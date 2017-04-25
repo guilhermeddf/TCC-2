@@ -1,0 +1,35 @@
+<h1>Criar Repositório</h1>
+
+<%= form_tag(submit_create_project_path) do -%>
+ <%= label_tag 'Nome:' -%>
+ <%= text_field_tag 'Nome', '', size: 30-%> <br />
+
+ <%= label_tag 'Descrição:' -%>
+ <%= text_field_tag 'Descricao', '', size: 60-%><br />
+
+<%= label_tag 'Privado:' -%>
+<%= radio_button_tag( 'opcao_privado', 'privado')-%>
+<%= label_tag 'Sim' -%>
+<%= radio_button_tag( 'opcao_privado', 'privado')-%>
+<%= label_tag 'Não' -%><br />
+
+<%= label_tag 'Issues:' -%>
+<%= radio_button_tag( 'opcao_issues', 'issues')-%>
+<%= label_tag 'Sim' -%>
+<%= radio_button_tag( 'opcao_issues', 'issues')-%>
+<%= label_tag 'Não' -%><br />
+
+<%= label_tag 'Projetos:' -%>
+<%= radio_button_tag( 'opcao_projeto', 'project')-%>
+<%= label_tag 'Sim' -%>
+<%= radio_button_tag( 'opcao_projeto', 'project')-%>
+<%= label_tag 'Não' -%><br />
+
+<%= label_tag 'Wiki:' -%>
+<%= radio_button_tag( 'opcao_wiki', 'wiki')-%>
+<%= label_tag 'Sim' -%>
+<%= radio_button_tag( 'opcao_wiki', 'wiki')-%>
+<%= label_tag 'Não' -%><br />
+  
+  <div><%= submit_tag 'Criar Projeto' %></div>
+<% end -%>

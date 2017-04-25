@@ -1,0 +1,11 @@
+<h1>Convidar para o Projeto</h1>
+
+<%= form_tag(submit_invite_project_path) do -%>
+ 
+ <%= label_tag 'Digite o Usuário:' -%>
+ <%= text_field_tag 'Usuario', '', size: 30-%> <br /> 
+ <%= label_tag 'Selecione o Repositório:' -%>
+<%= select_tag 'Repositorios', options_for_select(@client.repositories.collect{ |u| [u.name] }),prompt: "Selecione algo" -%>
+ 
+ <div><%= submit_tag 'Convidar' %></div>
+<% end -%>

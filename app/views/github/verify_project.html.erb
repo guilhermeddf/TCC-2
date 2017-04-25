@@ -1,0 +1,10 @@
+<h1>Teste</h1>
+
+<%= form_tag(submit_verify_project_path) do -%>
+ <%= flash_message %>
+ <%= label_tag 'Digite o nome do Repositório:' -%>
+ <%= text_field_tag 'Repositorio', '', size: 30-%> <br /> 
+ 
+ <div><%= submit_tag 'Pesquisar' %></div>
+ 
+<% end -%>

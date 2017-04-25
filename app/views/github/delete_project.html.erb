@@ -1,0 +1,9 @@
+<h1>Deletar Projeto</h1>
+
+<%= form_tag(submit_delete_project_path) do -%>
+ 
+<%= label_tag 'Selecione o Repositório:' -%>
+<%= select_tag 'Repositorios', options_for_select(@client.repositories.collect{ |u| [u.name] }),prompt: "Selecione algo" -%>
+ 
+ <div><%= submit_tag 'Deletar' %></div>
+<% end -%>
