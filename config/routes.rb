@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   #root to: 'github#index'
   root to: 'login#new'
   get "new" => 'login#new'
+
+  post "rotaInfelizDasGalaxias" => 'login#testtest'
+
+  get "index" =>'github#index'
   
   get "verify_project" => 'github#verify_project'
   post "submit_verify_project" => 'github#submit_verify_project'

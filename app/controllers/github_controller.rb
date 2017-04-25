@@ -10,7 +10,10 @@ class GithubController < ApplicationController
   end
 
   def index
+    @juaquim = Octokit::Client.new(:login => params[:Usuario], :password => params[:Senha])
+
     @repositories = @client.repositories
+
   end  
   
   def create_project
